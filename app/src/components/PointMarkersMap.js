@@ -331,7 +331,7 @@ class PointMarkersMap extends Component {
 
     let m = new GCPMarker([lat, lng], {
       icon: myIcon,
-      draggable: true,
+      draggable: false,
       onActionsClick: (evt) => {
         this.onActionsClick(evt, pt.id);
       }

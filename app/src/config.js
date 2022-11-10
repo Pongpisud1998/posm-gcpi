@@ -3,8 +3,8 @@ const config = {
     minZoom: 2,
     scrollWheelZoom: true,
     zoomControl: false,
-    initialZoom: 2,
-    initialCenter: [30, -20]
+    initialZoom: 1,
+    initialCenter: [30, -20],
   },
   map_providers: [
     {
@@ -19,7 +19,7 @@ const config = {
       label: 'Satellite',
       url: 'https://ecn.t{s}.tiles.virtualearth.net/tiles/a{q}.jpeg?g=587&mkt=en-gb&n=z',
       attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors</a>',
-      maxZoom: 20,
+      maxZoom: 19,
       useBing: true
     }
   ],

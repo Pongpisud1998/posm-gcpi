@@ -467,19 +467,19 @@ class ImagePanZoom extends Component {
   }
 
   onVisible(nextProps) {
-    const { addAutomaticControlPoint, image, markers, selectedImage } = nextProps;
-    const imageMarkers = this.getImageMarkers(markers, selectedImage);
+    // const { addAutomaticControlPoint, image, markers, selectedImage } = nextProps;
+    // const imageMarkers = this.getImageMarkers(markers, selectedImage);
 
-    // If no points for this image, make one up
-    if (!imageMarkers || !imageMarkers.length) {
-      const x = this.el.offsetWidth / 2;
-      const y = this.el.offsetHeight / 2;
-      const left = this.el.scrollLeft;
-      const top = this.el.scrollTop;
+    // // If no points for this image, make one up
+    // if (!imageMarkers || !imageMarkers.length) {
+    //   const x = this.el.offsetWidth / 2;
+    //   const y = this.el.offsetHeight / 2;
+    //   const left = this.el.scrollLeft;
+    //   const top = this.el.scrollTop;
 
-      const [nx, ny] = this.transformPosition(left + x, top + y, true);
-      addAutomaticControlPoint([nx, ny], image.name, true);
-    }
+    //   const [nx, ny] = this.transformPosition(left + x, top + y, true);
+    //   addAutomaticControlPoint([nx, ny], image.name, true);
+    // }
   }
 
   onNotVisible() {

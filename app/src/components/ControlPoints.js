@@ -16,18 +16,30 @@ class ControlPoints extends Component {
     return points.map((pt) => (
       <li key={`gcp-tick-${pt.id}`} className={classNames(
         'active', 'point', { 'edit': pt.isAutomatic }
-      )}/>
+      )} />
     ));
+  }
+
+  DownloadExample() {
+    const link = document.createElement("a");
+    link.href = 'https://mapedia.co.th/prod/posm-gcpi/file/gcp_example.txt';
+    link.download = 'gcp_example.txt';
   }
 
   render() {
     return (
       <div className='control-points-i'>
-        <div>
-          <h3>Ground Control Points</h3>
-          <ul>
-            {this.renderPoints()}
-          </ul>
+        <div class="row">
+          <div>
+            <h3>Ground Control Points</h3>
+
+            <ul>
+              {this.renderPoints()}
+            </ul>
+          </div>
+          <div>
+            <button onClick={this.DownloadExample()}>Download Example</button>
+          </div>
         </div>
       </div>
     );
